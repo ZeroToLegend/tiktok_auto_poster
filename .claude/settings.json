@@ -1,0 +1,47 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(python scripts/tool_*.py:*)",
+      "Bash(python scripts/sensor_*.py:*)",
+      "Bash(python scripts/cron_worker.py:*)",
+      "Bash(python scripts/run_agent.py:*)",
+      "Bash(./validate-skills.sh)",
+      "Bash(./audit-harness.sh)",
+      "Bash(bash validate-skills.sh)",
+      "Bash(bash audit-harness.sh)",
+      "Bash(ls:*)",
+      "Bash(cat:*)",
+      "Bash(head:*)",
+      "Bash(tail:*)",
+      "Bash(grep:*)",
+      "Bash(wc:*)",
+      "Bash(pgrep:*)",
+      "Bash(ffprobe:*)",
+      "Bash(sqlite3 data/*:*)",
+      "Read(**)",
+      "Write(data/**)",
+      "Write(logs/**)",
+      "Write(.agents/**)"
+    ],
+    "deny": [
+      "Bash(rm:*)",
+      "Bash(sudo:*)",
+      "Bash(curl:*)",
+      "Bash(wget:*)",
+      "Bash(git push:*)",
+      "Bash(npm publish:*)",
+      "Write(config/.env)",
+      "Write(config/config.yaml)",
+      "Write(tools/**)",
+      "Write(agent/**)",
+      "Write(.claude/skills/**)",
+      "Write(scripts/**)"
+    ],
+    "notes": [
+      "Agent can READ everything but WRITE only to data/, logs/, .agents/.",
+      "SKILL.md files are read-only for agent — only humans update after gardener proposals.",
+      "scripts/ and tools/ are read-only to prevent agent from self-modifying code.",
+      "If agent needs to update a skill based on gardener, it proposes via memory.md."
+    ]
+  }
+}

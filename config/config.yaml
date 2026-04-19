@@ -1,0 +1,60 @@
+# TikTok Auto Poster - Cấu hình chính
+
+tiktok:
+  # Secrets inject từ biến môi trường (.env)
+  client_key: ""
+  client_secret: ""
+  access_token: ""
+  refresh_token: ""
+
+anthropic:
+  # KHÔNG dùng Anthropic API nữa. Để lại empty cho backward compat.
+  api_key: ""
+
+# Claude Code CLI settings (thay thế cho Anthropic API)
+# Dùng account Claude Pro/Max của bạn, không tốn phí API
+claude_cli:
+  binary: claude           # lệnh trong PATH
+  timeout: 60              # giây cho mỗi lần gọi
+  # Backoff nếu hit rate limit Pro (Claude Pro reset mỗi 5h)
+  rate_limit_wait: 300     # giây chờ trước khi retry
+
+# Giới hạn
+limits:
+  daily_post_limit: 6       # theo khuyến nghị TikTok tránh bị flag
+  min_gap_minutes: 120      # tối thiểu giữa 2 post
+  max_retries: 5
+
+# Video processing
+video:
+  target_width: 1080
+  target_height: 1920
+  target_fps: 30
+  max_duration_seconds: 180
+  crf: 23                   # H.264 quality (18–28)
+
+# Optional: watermark logo
+# watermark_path: "data/logo.png"
+
+# Chiến lược caption
+defaults:
+  style: gen_z_engaging     # hoặc professional / storytelling / educational
+  language: vi
+  privacy: PUBLIC_TO_EVERYONE
+
+# Hashtag strategy
+hashtags:
+  strategy: balanced        # trending / niche / balanced
+  count: 5
+  brand_tags:
+    - "mybrand"
+
+# Giờ vàng đăng bài (giờ địa phương, 24h)
+golden_hours: [6, 7, 8, 9, 12, 19, 20, 21, 22]
+
+# Paths (tương đối với project root)
+queue_db: "data/queue.db"
+analytics_db: "data/analytics.db"
+
+# Logging
+log_level: INFO

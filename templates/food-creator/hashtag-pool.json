@@ -1,0 +1,11 @@
+{
+  "niche_tags": {
+    "recipe": ["monngon", "congthucnauan", "monviet", "recipe", "homecooking"],
+    "street_food": ["streetfood", "streetfoodvn", "amthucduongpho", "anvat"],
+    "review": ["reviewdoan", "quanngon", "foodreview", "foodhunter"],
+    "region": ["amthuchn", "monngonhanoi", "amthucsaigon", "danangfood"]
+  },
+  "evergreen_tags": ["amthucvn", "foodtiktok", "monngonmoingay", "learnontiktok"],
+  "trending_tags_vn": ["fyp", "xuhuong", "xuhuongtiktok", "viral"],
+  "blacklist": ["food", "yummy", "delicious"]
+}

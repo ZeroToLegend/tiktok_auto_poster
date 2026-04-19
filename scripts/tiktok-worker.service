@@ -1,0 +1,18 @@
+[Unit]
+Description=TikTok Auto Poster Worker
+After=network.target
+
+[Service]
+Type=simple
+User=tiktok
+WorkingDirectory=/opt/tiktok_auto_poster
+Environment="PATH=/opt/tiktok_auto_poster/venv/bin"
+ExecStart=/opt/tiktok_auto_poster/venv/bin/python scripts/cron_worker.py --interval=300
+Restart=on-failure
+RestartSec=30
+
+StandardOutput=append:/var/log/tiktok-worker.log
+StandardError=append:/var/log/tiktok-worker-error.log
+
+[Install]
+WantedBy=multi-user.target

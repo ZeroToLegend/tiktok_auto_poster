@@ -1,0 +1,30 @@
+{
+  "niche_tags": {
+    "python": ["pythontips", "pythonprogramming", "pythonforbeginners", "learnpython"],
+    "javascript": ["javascript", "webdev", "frontenddev", "fullstackdev"],
+    "devops": ["devops", "docker", "kubernetes", "cloudcomputing"],
+    "data": ["datascience", "machinelearning", "sqltips", "dataanalyst"],
+    "career": ["devcareer", "itjobs", "coderlife", "techcareer"],
+    "tools": ["vscode", "github", "terminaltips", "productivitytips"]
+  },
+  "evergreen_tags": [
+    "codingbeginner",
+    "learnontiktok",
+    "techtok",
+    "coderlife",
+    "devtok"
+  ],
+  "trending_tags_vn": [
+    "fyp",
+    "xuhuong",
+    "xuhuongtiktok",
+    "laptrinhvn",
+    "ittips"
+  ],
+  "blacklist": [
+    "coding",
+    "programmer",
+    "developer"
+  ],
+  "note": "Blacklist contains tags too generic (massive pool, impossible to rank). Prefer specific language/tool tags."
+}

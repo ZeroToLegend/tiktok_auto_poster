@@ -1,0 +1,25 @@
+{
+  "niche_tags": {
+    "skincare": ["skincare", "skincareroutine", "skincaretips", "glassskin", "skincarevietnam"],
+    "makeup": ["makeuptutorial", "makeuptips", "maketokvn", "makeuplook"],
+    "review": ["beautyreview", "skincarereview", "reviewmypham"],
+    "ingredient": ["niacinamide", "retinol", "vitaminc", "bha", "aha"],
+    "budget": ["drugstoremakeup", "mypham binhdan", "skincareaffordable"]
+  },
+  "evergreen_tags": ["beautytok", "beautyvn", "lamdep", "learnontiktok"],
+  "trending_tags_vn": ["fyp", "xuhuong", "xuhuongtiktok", "glowup"],
+  "blacklist": [
+    "beauty",
+    "makeup",
+    "skincare",
+    "beforeandafter"
+  ],
+  "compliance_warning_keywords": [
+    "chữa bệnh",
+    "trị dứt điểm",
+    "khỏi 100%",
+    "bác sĩ khuyến nghị",
+    "thuốc",
+    "điều trị"
+  ]
+}
