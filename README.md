@@ -258,5 +258,3 @@ Built on research from:
 ## License
 
 Your code is yours. Rules in SKILL.md files are for your agent. Be kind to TikTok's infrastructure.
-#   t i k t o k _ a u t o _ p o s t e r  
- 
