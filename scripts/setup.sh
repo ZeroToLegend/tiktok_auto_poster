@@ -1,14 +1,15 @@
 #!/usr/bin/env bash
-# setup.sh — Cài đặt môi trường
+# setup.sh — macOS / Linux setup script
 set -euo pipefail
 
 echo "📦 Kiểm tra dependencies hệ thống..."
-command -v ffmpeg >/dev/null 2>&1 || {
-    echo "Cài ffmpeg:"
-    echo "  Ubuntu: sudo apt install ffmpeg"
-    echo "  macOS:  brew install ffmpeg"
+if ! command -v ffmpeg >/dev/null 2>&1; then
+    echo "❌ ffmpeg chưa được cài. Cách cài:"
+    echo "   macOS:  brew install ffmpeg"
+    echo "   Ubuntu: sudo apt install ffmpeg"
+    echo "   Arch:   sudo pacman -S ffmpeg"
     exit 1
-}
+fi
 
 echo "🐍 Tạo virtualenv..."
 python3 -m venv venv
@@ -20,7 +21,7 @@ pip install --upgrade pip
 pip install -r requirements.txt
 
 echo "📁 Khởi tạo thư mục data..."
-mkdir -p data/videos data/processed logs
+mkdir -p data/videos data/processed logs .agents
 
 echo "🔐 Tạo .env từ template..."
 if [ ! -f config/.env ]; then

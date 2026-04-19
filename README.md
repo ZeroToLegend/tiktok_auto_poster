@@ -126,11 +126,23 @@ tiktok_auto_poster/
 
 ### 1. Install
 
+**macOS / Linux**
 ```bash
 bash scripts/setup.sh
 ```
 
+**Windows**
+```cmd
+setup.bat
+```
+
 Prerequisites: Python 3.10+, ffmpeg, Claude Code CLI (logged in).
+
+| OS | ffmpeg | Python |
+|---|---|---|
+| macOS | `brew install ffmpeg` | `brew install python` |
+| Ubuntu | `sudo apt install ffmpeg` | built-in |
+| Windows | `winget install Gyan.FFmpeg` | [python.org](https://www.python.org/downloads/) |
 
 ### 2. Pick a template (optional but fast)
 
@@ -154,9 +166,22 @@ No credentials needed. System generates packages for you to paste into TikTok ap
 
 ### 4. Verify harness quality
 
+**macOS / Linux**
 ```bash
 ./validate-skills.sh    # lint all SKILL.md
 ./audit-harness.sh      # score 0-100
+```
+
+**Windows**
+```cmd
+validate-skills.bat
+audit-harness.bat
+```
+
+**Any OS (Python trực tiếp)**
+```bash
+python scripts/validate_skills.py
+python scripts/audit_harness.py
 ```
 
 ## Usage
